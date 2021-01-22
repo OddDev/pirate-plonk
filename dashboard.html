@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <style>
+      #spinner {
+        display: none;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: dotted 5px pink;
+        animation: rotate 2s infinite alternate;
+        margin: 1em;
+      }
+
+      @keyframes rotate {
+        from {
+          transform: rotate(0deg);
+        }
+        to {
+          transform: rotate(360deg) scale(1.2);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Current Average</h2>
+    <h3 id="average">Loading ...</h3>
+    <div id="spinner"></div>
+    <button onclick="fetchAndParseData()">Fetch Data</button>
+    <ul id="list"></ul>
+    <script src="dashboard.js"></script>
+  </body>
+</html>
